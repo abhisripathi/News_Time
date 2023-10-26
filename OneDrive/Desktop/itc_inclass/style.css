@@ -1,4 +1,9 @@
 /* Strategic CSS Structure (global styles) */
+/*Strategic CSS Structure:
+
+We start with a global style reset using the asterisk (*) selector, ensuring consistent margins, paddings, and a uniform box-sizing across all elements.
+The body is structured using flexbox, ensuring the main content grows to occupy the available space, and pushing the footer to the bottom.
+We've also incorporated a clean sans-serif font, 'Open Sans', for a modern look.*/
 * {
     margin: 0;
     padding: 0;
@@ -27,6 +32,15 @@ h1, h2 {
 }
 
 /* Using Flexbox for the header and footer */
+/*Flexbox:
+
+The header and footer both employ flexbox. This provides a linear layout, 
+placing the logo and navigation on opposite ends in the header.
+The .flex-container has the justify-content: space-between property, 
+ensuring that the child elements (logo and navigation) are spaced out evenly.
+The navigation items use flexbox too, to lie horizontally next to each other.
+For responsive design, when the screen size drops below 768px, these elements 
+stack vertically for better readability on mobile devices.*/
 .flex-container {
     display: flex;
     justify-content: space-between;
@@ -41,6 +55,14 @@ nav ul {
 }
 
 /* Using CSS Grid for the main content area */
+/*CSS Grid:
+
+The main content area utilizes CSS Grid to define a two-column layout - \
+one for main content and one for a sidebar. This is achieved with the 
+grid-template-columns: 2fr 1fr property, giving the content area twice the space 
+as the sidebar.Again, in the name of responsiveness, on smaller screens, 
+these columns stack, ensuring they're readable on mobile devices.*/
+
 .grid-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -62,6 +84,14 @@ nav ul {
 }
 
 /* Using Floats for an image inside the sidebar */
+/*Floats:
+
+Inside our sidebar, we've used the float property for images, 
+making them align to the right of their container. This creates a 
+wrap-around effect where the text wraps around the floated images.
+To prevent any unwanted layout behavior, a clearfix is used 
+in the .sidebar, ensuring it doesn't collapse when it contains floated elements.*/
+
 .float-img {
     float: right;
     margin-left: 10px;
@@ -76,6 +106,11 @@ nav ul {
 }
 
 /* Responsive Design with Flexbox (for smaller screens) */
+/* Responsive Design:
+
+Our design is adaptive. As the viewport decreases, our flex and grid layouts 
+change to accommodate mobile users. This is achieved using a media query for 
+screens with a maximum width of 768px.*/
 @media (max-width: 768px) {
     .flex-container {
         flex-direction: column;
