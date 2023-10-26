@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=s" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Using Flexbox for the header -->
+    <header class="flex-container">
+        <h1><img src="./images/image1.jpg" alt="Logo" width="200"> News Time</h1>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Using CSS Grid for the main content area -->
+    <main class="grid-container">
+        <section class="content">
+            <h2>Welcome</h2>
+            <p>This is a simple responsive webpage.</p>
+            <img src="./images/i3.jpg" class="float-img" alt="News Image">
+            <img src="./images/image2.jpg" alt="Sample Image" width="300">
+            <img src="./images/i4.jpeg" alt="Sample Image 2" width="300">
+            <img src="./images/i5.jpeg" class="float-img" alt="News Image">
+            
+        </section>
+        <aside class="sidebar">
+            <h2>News</h2>
+            <!-- Using Floats for an image inside this sidebar -->
+            <img src="./images/i2.webp" class="float-img" alt="News Image" width="400px">
+            <img src="./images/i3.jpg" class="float-img" alt="News Image" width="400px">
+            <img src="./images/i6.jpeg" class="float-img" alt="News Image">
+            <img src="./images/i7.jpeg" class="float-img" alt="News Image">
+            <p>Latest updates go here.</p>
+        </aside>
+    </main>
+
+    <!-- Using Flexbox for the footer -->
+    <footer class="flex-container">
+        <p>© 2023 My Website</p>
+    </footer>
+</body>
+</html>
