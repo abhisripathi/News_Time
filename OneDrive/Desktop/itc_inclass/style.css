@@ -1,8 +1,10 @@
 /* Strategic CSS Structure (global styles) */
 /*Strategic CSS Structure:
 
-We start with a global style reset using the asterisk (*) selector, ensuring consistent margins, paddings, and a uniform box-sizing across all elements.
-The body is structured using flexbox, ensuring the main content grows to occupy the available space, and pushing the footer to the bottom.
+We start with a global style reset using the asterisk (*) selector, 
+ensuring consistent margins, paddings, and a uniform box-sizing across all elements.
+The body is structured using flexbox, ensuring the main content grows to occupy the 
+available space, and pushing the footer to the bottom.
 We've also incorporated a clean sans-serif font, 'Open Sans', for a modern look.*/
 * {
     margin: 0;
@@ -17,6 +19,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
 
 ul {
@@ -95,7 +98,7 @@ in the .sidebar, ensuring it doesn't collapse when it contains floated elements.
 .float-img {
     float: right;
     margin-left: 10px;
-    width: 50%;
+    width: 50%;`
 }
 
 /* Clearfix to make sure the container doesn't collapse when containing floats */
@@ -104,6 +107,49 @@ in the .sidebar, ensuring it doesn't collapse when it contains floated elements.
     display: table;
     clear: both;
 }
+
+/*                                          Module - 6 Start
+A roll over effect on images
+
+In today's presentation, we'll explore a dynamic visual enhancement technique 
+known as the 'rollover effect' for images on a webpage. This effect is achieved 
+using Cascading Style Sheets (CSS) and provides an interactive experience for the user. 
+When a user hovers over an image, the image undergoes a subtle transformation, increasing 
+in size to 110% of its original dimensions and slightly fading in opacity to 80%. 
+This transition is smoothly animated over 0.3 seconds, ensuring it's noticeable yet elegant. 
+Implementing this effect involves the use of the CSS transition, transform, and hover properties. 
+*/
+img {
+    transition: all 0.3s ease-in-out;  /* This will give a smooth transition effect */
+}
+
+img:hover {
+    transform: scale(1.1);  /* Scales the image up to 110% of its original size */
+    opacity: 0.8;          /* Reduces opacity to 80% */
+}
+
+/* A button that changes colors when clicked 
+
+*/
+.nav-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #555;
+}
+
+.nav-button:active {
+    background-color: #111;
+}
+
+/*                                     Module 6 End                             */
 
 /* Responsive Design with Flexbox (for smaller screens) */
 /* Responsive Design:

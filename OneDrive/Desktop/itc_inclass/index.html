@@ -6,6 +6,8 @@
     <title>Responsive Webpage</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=s" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> <!--Linking external Js -->
+    
 </head>
 <body>
     <!-- Using Flexbox for the header -->
@@ -13,10 +15,10 @@
         <h1><img src="./images/image1.jpg" alt="Logo" width="200"> News Time</h1>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
+                <li><button class="nav-button" onclick="changeColor(this)">Home</button></li>
+                <li><button class="nav-button" onclick="changeColor(this)">About</button></li>
+                <li><button class="nav-button" onclick="changeColor(this)">Contact</button></li>
+            </ul>            
         </nav>
     </header>
 
@@ -42,9 +44,19 @@
         </aside>
     </main>
 
+    <section class="form-section">
+        <h2>Submit your data:</h2>
+        <form id="dataForm">
+            <input type="text" id="userData" placeholder="Enter your data here...">
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
     <!-- Using Flexbox for the footer -->
     <footer class="flex-container">
         <p>© 2023 My Website</p>
     </footer>
+    <script src="script.js"></script>
+
 </body>
 </html>
